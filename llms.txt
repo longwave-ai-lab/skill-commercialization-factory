@@ -1,0 +1,22 @@
+# AI Skill & DevTool Commercialization Factory
+
+> Built by Longwave AI Lab. Deterministic 2-Tier Open-Core AI Engineering System ($0+ MIT Starter / $19 Commercial Pro Bundle) for Google Antigravity (GEMINI.md), Cursor IDE (.cursor/rules/*.mdc), Claude Code (CLAUDE.md & SKILL.md), and ChatGPT Projects.
+
+## Core Architecture Modules
+
+- [Module 01: 01-open-core-skill-packaging-compiler](rules/01-open-core-skill-packaging-compiler.md): Enforces single-source-of-truth rule compilation into Cursor .mdc, Claude SKILL.md (with version: 1.0.0), Antigravity GEMINI.md (<= 200 lines), llms.txt, npx CLI wrappers, and 2-Tier Open-Core ZIP isolation. Enforced by deterministic Node.js linter `scripts/lint_open_core_compiler.mjs` returning exit code 1 on violations.
+- [Module 02: 02-geo-monograph-and-storefront-engine](rules/02-geo-monograph-and-storefront-engine.md): Enforces 6-Tier Persuasion Architecture, YAML GEO citation schemas, 3 EN/VI Before/After Teardowns, Token/Time ROI & Explicit Boundaries blocks, and semantic TipTap HTML compilation without stripped $ tokens. Enforced by deterministic Node.js linter `scripts/lint_geo_storefront_engine.mjs` returning exit code 1 on violations.
+- [Module 03: 03-dual-layer-verification-and-mutation-harness](rules/03-dual-layer-verification-and-mutation-harness.md): Enforces Layer 1 deterministic AST/byte/identity/prose gates and Layer 2 Jev evaluation state separation (blocking fake 1.0 probabilities when Jev is NOT_RUN and blocking Layer 2 override of Layer 1 HARD_FAIL). Enforced by deterministic Node.js linter `scripts/lint_dual_layer_harness.mjs` returning exit code 1 on violations.
+- [Module 04: 04-tos-compliant-omni-channel-distribution-ops](rules/04-tos-compliant-omni-channel-distribution-ops.md): Enforces 100% Human-in-the-Loop Facebook/Reddit/Dev.to distribution kits, Single-Shot Thread Locks, Dual-Anchor Zero-Link posts, and [FB-GATE-8] zero browser-bot ToS compliance. Enforced by deterministic Node.js linter `scripts/lint_tos_distribution_ops.mjs` returning exit code 1 on violations.
+
+## Deep-Dive Technical Monographs (GEO Indexed)
+
+- [01-single-source-skill-compilation-and-multi-agent-packaging.md](docs/01-single-source-skill-compilation-and-multi-agent-packaging.md): Full bilingual English and Vietnamese architectural monograph.
+- [02-generative-engine-optimization-and-6-tier-technical-copywriting.md](docs/02-generative-engine-optimization-and-6-tier-technical-copywriting.md): Full bilingual English and Vietnamese architectural monograph.
+- [03-dual-layer-deterministic-and-semantic-verification-harnesses.md](docs/03-dual-layer-deterministic-and-semantic-verification-harnesses.md): Full bilingual English and Vietnamese architectural monograph.
+
+## Quickstart & Verification CLI
+
+- Install via npx: `npx @longwave-ai-lab/skill-commercialization-factory init .`
+- Run deterministic verification: `node scripts/lint_open_core_compiler.mjs`
+- Quickstart Guide: [QUICKSTART-30S.md](QUICKSTART-30S.md)

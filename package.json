@@ -1,0 +1,28 @@
+{
+  "name": "@longwave-ai-lab/skill-commercialization-factory",
+  "version": "1.0.0",
+  "description": "8-Stage Dual-Layer Commercialization Pipeline for Packaging, Verifying, and Distributing Cursor Rules (.mdc), Claude Code Skills (SKILL.md), and Google Antigravity Systems (GEMINI.md).",
+  "type": "module",
+  "bin": {
+    "skill-commercialization-factory": "./bin/cli.mjs"
+  },
+  "scripts": {
+    "lint": "node scripts/lint_open_core_compiler.mjs",
+    "test": "node ./bin/cli.mjs --check"
+  },
+  "keywords": [
+    "cursor-rules",
+    "claude-code",
+    "agent-skills",
+    "google-antigravity",
+    "deterministic-harness",
+    "longwave-ai-lab",
+    "skill-commercialization-factory"
+  ],
+  "author": "Longwave AI Lab <307369959+longwave-ai-lab@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/longwave-ai-lab/skill-commercialization-factory.git"
+  }
+}
