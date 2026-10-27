@@ -20,7 +20,7 @@ quantitative_engineering_thresholds:
   - "GEO Technical Monograph Depth: >= 200 lines, >= 1,500 words, >= 0.23 unique vocabulary ratio"
   - "Prose Sentence Ceiling: <= 45 words (EN/VI), 0 em-dashes, 0 prose semicolons"
   - "Storefront TipTap HTML Payload: >= 4 <p>, >= 5 <ul>, >= 20 <li>, 0 raw Markdown syntax"
-  - "Dual-Layer Verification Gates: 205 deterministic Layer 1 checks + 36 adversarial mutation tests"
+  - "Dual-Layer Verification Gates: 239 deterministic Layer 1 checks + 36 adversarial mutation tests"
 architecture_modules:
   - "Module 01 (Free Open-Core): Open-Core Skill Packaging & Multi-Agent Compiler"
   - "Module 02 (Pro Bundle): GEO Technical Monograph & Storefront Conversion Engine"
@@ -120,7 +120,7 @@ Most engineers who build a great Cursor `.mdc` rule, Claude Code `SKILL.md`, or 
 <a id="open-core-vs-pro-comparison"></a>
 ## 3. Open-Core Architecture: Free Starter (`$0+`) vs. Pro Factory Bundle (`$19`)
 
-We follow a transparent Open-Core engineering model. **Module 01** and all 3 GEO Technical Monographs are 100% free and open-source under the **MIT License** so you can verify our engineering depth immediately. The **$19 Pro Bundle** unlocks the complete 4-module factory, automated storefront HTML compiler, 205-gate dual-layer verification harness, 36-test adversarial mutation suite, and omni-channel distribution kit.
+We follow a transparent Open-Core engineering model. **Module 01** and all 3 GEO Technical Monographs are 100% free and open-source under the **MIT License** so you can verify our engineering depth immediately. The **$19 Pro Bundle** unlocks the complete 4-module factory, automated storefront HTML compiler, 239-gate dual-layer verification harness, 36-test adversarial mutation suite, and omni-channel distribution kit.
 
 | Capability / Deliverable | Free Open-Core Starter (`$0+` MIT) | Pro Commercialization Factory (`$19`) |
 | :--- | :--- | :--- |
@@ -130,7 +130,7 @@ We follow a transparent Open-Core engineering model. **Module 01** and all 3 GEO
 | **Module 02: GEO Monograph & Storefront Engine** | Not included in Starter | Included (`rules/02` + `lint_geo_storefront_engine.mjs`) |
 | **Gumroad TipTap Rich-Text HTML Compiler** | Not included in Starter | Included (`GUMROAD-TIPTAP-PAYLOAD.html` generator) |
 | **Module 03: Dual-Layer Verification & Mutation Harness** | Not included in Starter | Included (`rules/03` + `lint_dual_layer_harness.mjs`) |
-| **205-Gate Verifier + 36 Adversarial Mutation Tests** | Not included in Starter | Included (`verify_and_build_product.mjs` + `challenge_verification_suite.mjs`) |
+| **239-Gate Verifier + 36 Adversarial Mutation Tests** | Not included in Starter | Included (`verify_and_build_product.mjs` + `challenge_verification_suite.mjs`) |
 | **Module 04: ToS-Compliant Omni-Channel Distribution Ops** | Not included in Starter | Included (`rules/04` + `lint_tos_distribution_ops.mjs`) |
 | **Facebook 2K Zero-Link Kit & 3-Gram Jaccard Anti-Spam Guard** | Not included in Starter | Included (`FACEBOOK-GROUP-ZERO-LINK-KIT.md` + `verify_facebook_ops_action.mjs`) |
 | **Trojan Horse Comment Playbook (80/20 Value-First)** | Not included in Starter | Included (`TROJAN-HORSE-COMMENT-PLAYBOOK.md` + Dev.to EN/VI Articles) |
@@ -141,7 +141,7 @@ We follow a transparent Open-Core engineering model. **Module 01** and all 3 GEO
 
 **Tiếng Việt**:
 - **Gói Khởi Đầu Miễn Phí (`$0+` Chuẩn MIT)**: Bao gồm trọn vẹn **Mô-đun 01** (Trình biên dịch đóng gói đa nền tảng cho Cursor, Claude Code, Antigravity), công cụ dòng lệnh `npx`, và chỉ mục `llms.txt`. Gói này cũng đi kèm bộ lọc `lint_open_core_compiler.mjs` và toàn bộ **3 bài chuyên khảo kỹ thuật (`docs/01..03.md`)**.
-- **Gói Nhà Máy Thương Mại Hóa Bản Pro (`$19`)**: Mở khóa trọn bộ **4 Mô-đun chuyên sâu** và trình biên dịch HTML TipTap cho Gumroad. Đi kèm là hệ thống **205 chốt chặn Lớp 1 + 36 bài kiểm thử đột biến** cùng bộ công cụ phân phối đa kênh (`Zero-Link Facebook Kit`, `Trojan Horse Comment Playbook`, `3-Gram Jaccard Guard`).
+- **Gói Nhà Máy Thương Mại Hóa Bản Pro (`$19`)**: Mở khóa trọn bộ **4 Mô-đun chuyên sâu** và trình biên dịch HTML TipTap cho Gumroad. Đi kèm là hệ thống **239 chốt chặn Lớp 1 + 36 bài kiểm thử đột biến** cùng bộ công cụ phân phối đa kênh (`Zero-Link Facebook Kit`, `Trojan Horse Comment Playbook`, `3-Gram Jaccard Guard`).
 
 ---
 
@@ -277,9 +277,9 @@ Building, verifying, and distributing a multi-platform AI skill product from scr
 - **Manual Multi-Agent Packaging & Sync (`~8 hours/release`)**: Rewriting `.cursor/rules/*.mdc`, `.claude/skills/*/SKILL.md`, `.agents/skills/*/SKILL.md`, `CLAUDE.md`, `GEMINI.md`, `llms.txt`, and `bin/cli.mjs` by hand across free and paid tiers takes a full workday and frequently introduces paywall leaks. `factory.mjs compile` executes the entire build in **1.2 seconds**.
 - **Root Context Token Savings (`95.1% reduction per turn`)**: Keeping root `CLAUDE.md` and `GEMINI.md` files under **120 lines** (`~950 tokens`) instead of a 1,400-line monolith (`~19,500 tokens`) saves **18,550 input tokens on every agent turn**. Across 500 coding turns per week, that saves **9.27 million input tokens** while keeping rule compliance above **92%**.
 - **Storefront HTML & Visual Asset Compilation (`~10 hours saved`)**: Writing a 6-Tier bilingual README (`3,000+ words`), compiling TipTap-safe HTML (`GUMROAD-TIPTAP-PAYLOAD.html`), and rendering 6 exact-dimension Retina PNG assets (`1280x720`, `600x600`, `1280x640`, `2400x1800`) manually takes over 10 hours. Our pipeline automates and verifies every pixel and HTML tag deterministically.
-- **205-Gate Dual-Layer Audit & 36 Mutation Tests (`~20 hours saved`)**: Writing bidirectional fixture runners, Unicode Vietnamese syntax linters, and 3-gram Jaccard anti-spam guards from scratch takes days of testing. At **$19** (less than 20 minutes of senior engineering billing), the Pro Bundle pays for itself on your very first release.
+- **239-Gate Dual-Layer Audit & 36 Mutation Tests (`~20 hours saved`)**: Writing bidirectional fixture runners, Unicode Vietnamese syntax linters, and 3-gram Jaccard anti-spam guards from scratch takes days of testing. At **$19** (less than 20 minutes of senior engineering billing), the Pro Bundle pays for itself on your very first release.
 
-**Tiếng Việt**: Tự xây dựng thủ công quy trình biên dịch 6 định dạng, chuyển đổi HTML cho Gumroad, vẽ 6 bộ ảnh chuẩn kích thước và viết hơn 200 bài kiểm tra tự động sẽ tốn ít nhất **38 giờ làm việc**. Với mức phí **$19** (mua một lần, dùng trọn đời), bộ công cụ rút ngắn toàn bộ khâu đóng gói xuống chỉ còn vài giây chạy lệnh và tiết kiệm hơn **95% lượng token** nạp vào mỗi lượt gọi AI.
+**Tiếng Việt**: Tự xây dựng thủ công quy trình biên dịch 6 định dạng, chuyển đổi HTML cho Gumroad, vẽ 6 bộ ảnh chuẩn kích thước và viết 239 bài kiểm tra tự động sẽ tốn ít nhất **38 giờ làm việc**. Với mức phí **$19** (mua một lần, dùng trọn đời), bộ công cụ rút ngắn toàn bộ khâu đóng gói xuống chỉ còn vài giây chạy lệnh và tiết kiệm hơn **95% lượng token** nạp vào mỗi lượt gọi AI.
 
 </details>
 
@@ -350,4 +350,4 @@ npx @longwave-ai-lab/skill-commercialization-factory init .
 ## License & Attribution
 
 - **Open-Core Starter (`Module 01`, `bin/cli.mjs`, `llms.txt`, `docs/01..03.md`)**: Licensed under the [MIT License](./LICENSE). Copyright (c) 2026 Longwave AI Lab.
-- **Pro Commercialization Factory Bundle (`Modules 01..04`, Storefront HTML Compiler, 205-Gate Verifier, 36-Test Mutation Suite, Omni-Channel Distribution Kit)**: Commercial License (`$19` with lifetime updates).
+- **Pro Commercialization Factory Bundle (`Modules 01..04`, Storefront HTML Compiler, 239-Gate Verifier, 36-Test Mutation Suite, Omni-Channel Distribution Kit)**: Commercial License (`$19` with lifetime updates).

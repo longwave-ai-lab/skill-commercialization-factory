@@ -201,7 +201,7 @@ node scripts/lint_dual_layer_harness.mjs README.md
 # Bước 2: Chạy bộ lọc kiểm tra tuân thủ Điều khoản Nền tảng của Mô-đun 04
 node scripts/lint_tos_distribution_ops.mjs
 
-# Bước 3: Chạy trình kiểm toán 205 cổng kết hợp đóng gói tự động
+# Bước 3: Chạy trình kiểm toán 239 cổng kết hợp đóng gói tự động
 node scripts/verify_and_build_product.mjs
 ```
 
