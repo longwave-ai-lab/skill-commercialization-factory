@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "skill-commercialization-factory",
+  "name": "AI Skill & DevTool Commercialization Factory",
+  "brand": "Longwave AI Lab",
+  "version": "1.0.0",
+  "description": "8-Stage Dual-Layer Commercialization Pipeline for Packaging, Verifying, and Distributing Cursor Rules (.mdc), Claude Code Skills (SKILL.md), and Google Antigravity Systems (GEMINI.md).",
+  "pricing": {
+    "starterFree": "$0+",
+    "proBundle": "$19"
+  },
+  "modules": [
+    {
+      "id": "01",
+      "base": "01-open-core-skill-packaging-compiler",
+      "skillDir": "open-core-skill-compiler",
+      "scriptName": "lint_open_core_compiler.mjs",
+      "description": "Enforces single-source-of-truth rule compilation into Cursor .mdc, Claude SKILL.md (with version: 1.0.0), Antigravity GEMINI.md (<= 200 lines), llms.txt, npx CLI wrappers, and 2-Tier Open-Core ZIP isolation.",
+      "globs": "**/*",
+      "alwaysApply": true
+    }
+  ],
+  "docs": [
+    "01-single-source-skill-compilation-and-multi-agent-packaging.md",
+    "02-generative-engine-optimization-and-6-tier-technical-copywriting.md",
+    "03-dual-layer-deterministic-and-semantic-verification-harnesses.md"
+  ]
+}

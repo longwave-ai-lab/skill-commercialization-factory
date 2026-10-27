@@ -49,13 +49,14 @@ if (cmd === '--check' || cmd === 'check') {
 
 if (cmd === 'init') {
   const targetDir = path.resolve(args[1] || process.cwd());
-  for (const folder of ['.cursor', '.claude', '.agents', 'rules', 'scripts']) {
+  fs.mkdirSync(targetDir, { recursive: true });
+  for (const folder of ['.cursor', '.claude', '.agents', 'rules', 'scripts', 'bin']) {
     const src = path.join(PKG_ROOT, folder);
     if (fs.existsSync(src)) {
       fs.cpSync(src, path.join(targetDir, folder), { recursive: true });
     }
   }
-  for (const rootDoc of ['CLAUDE.md', 'GEMINI.md', 'QUICKSTART-30S.md']) {
+  for (const rootDoc of ['product.manifest.json', 'CLAUDE.md', 'GEMINI.md', 'QUICKSTART-30S.md', 'llms.txt', 'package.json']) {
     const srcDoc = path.join(PKG_ROOT, rootDoc);
     const destDoc = path.join(targetDir, rootDoc);
     if (fs.existsSync(srcDoc) && !fs.existsSync(destDoc)) {

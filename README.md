@@ -86,7 +86,7 @@ node scripts/lint_open_core_compiler.mjs .
 
 **Tiếng Việt**: Bạn không cần tin vào lời quảng cáo. Hãy mở cửa sổ dòng lệnh và chạy ngay câu lệnh kiểm tra trong **30 giây** ở trên:
 - Trình biên dịch `lint_open_core_compiler.mjs` sẽ tự động kiểm tra toàn bộ cấu trúc `product.manifest.json`, giới hạn **200 dòng** của `CLAUDE.md` / `GEMINI.md`, tính hợp lệ của YAML frontmatter trong `.cursor/rules/*.mdc`, file chỉ mục `llms.txt` và trình cài đặt `bin/cli.mjs`.
-- Nếu bất kỳ file nào bị lệch chuẩn hoặc vượt ngưỡng bộ nhớ chú ý của AI, bộ lọc sẽ dừng lại ngay lập tức với `exit code 1` và chỉ rõ mã lỗi `[PKG-001..005]` kèm dòng cần sửa.
+- Nếu bất kỳ file nào bị lệch chuẩn hoặc vượt ngưỡng bộ nhớ chú ý của AI, bộ lọc sẽ dừng lại ngay lập tức với `exit code 1` và chỉ rõ mã lỗi `[COMPILER-001..005]` kèm dòng cần sửa.
 
 ---
 
@@ -131,7 +131,7 @@ We follow a transparent Open-Core engineering model. **Module 01** and all 3 GEO
 | **Gumroad TipTap Rich-Text HTML Compiler** | Not included in Starter | Included (`GUMROAD-TIPTAP-PAYLOAD.html` generator) |
 | **Module 03: Dual-Layer Verification & Mutation Harness** | Not included in Starter | Included (`rules/03` + `lint_dual_layer_harness.mjs`) |
 | **205-Gate Verifier + 36 Adversarial Mutation Tests** | Not included in Starter | Included (`verify_and_build_product.mjs` + `challenge_verification_suite.mjs`) |
-| **Module 04: ToS-Compliant Omni-Channel Distribution Ops** | Not included in Starter | Included (`rules/04` + `lint_omni_channel_distribution.mjs`) |
+| **Module 04: ToS-Compliant Omni-Channel Distribution Ops** | Not included in Starter | Included (`rules/04` + `lint_tos_distribution_ops.mjs`) |
 | **Facebook 2K Zero-Link Kit & 3-Gram Jaccard Anti-Spam Guard** | Not included in Starter | Included (`FACEBOOK-GROUP-ZERO-LINK-KIT.md` + `verify_facebook_ops_action.mjs`) |
 | **Trojan Horse Comment Playbook (80/20 Value-First)** | Not included in Starter | Included (`TROJAN-HORSE-COMMENT-PLAYBOOK.md` + Dev.to EN/VI Articles) |
 | **License & Updates** | MIT License (Open Source) | Commercial Team License + Lifetime Updates |
@@ -156,25 +156,25 @@ Every rule module in this factory contains four mandatory engineering components
 
 ### Module 01: Open-Core Skill Packaging & Multi-Agent Compiler (Included in Free `$0+` & Pro `$19`)
 - **Source File**: [`rules/01-open-core-skill-packaging-compiler.md`](./rules/01-open-core-skill-packaging-compiler.md)
-- **Executable Linter**: [`scripts/lint_open_core_compiler.mjs`](./scripts/lint_open_core_compiler.mjs) (`Error codes: [PKG-001..005]`)
+- **Executable Linter**: [`scripts/lint_open_core_compiler.mjs`](./scripts/lint_open_core_compiler.mjs) (`Error codes: [COMPILER-001..005]`)
 - **What It Solves**: Compiles a single canonical rule markdown file (`pro-bundle/rules/01..04.md`) into 6 synchronized multi-agent targets (`Cursor .mdc`, `Claude SKILL.md`, `Antigravity SKILL.md`, root `CLAUDE.md`/`GEMINI.md <= 200 lines`, `llms.txt`, and `bin/cli.mjs`), while strictly isolating the `$0+` MIT Starter Pack from the `$19` Pro Bundle.
 - **Tiếng Việt**: Biên dịch tự động từ một nguồn Markdown duy nhất ra 6 định dạng chuẩn cho Cursor, Claude Code, Antigravity, chỉ mục `llms.txt` và gói `npx`. Mô-đun này khóa cứng trần **200 dòng** cho file cấu hình gốc và tách biệt rạch ròi gói miễn phí với gói trả phí.
 
 ### Module 02: GEO Technical Monograph & Storefront Conversion Engine (Pro `$19` Bundle)
 - **Source File**: `pro-bundle/rules/02-geo-monograph-and-storefront-engine.md`
-- **Executable Linter**: `pro-bundle/scripts/lint_geo_storefront_engine.mjs` (`Error codes: [GEO-001..005]`)
+- **Executable Linter**: `pro-bundle/scripts/lint_geo_storefront_engine.mjs` (`Error codes: [GEO-001..004]`)
 - **What It Solves**: Enforces the **6-Tier Technical Persuasion Architecture** across `README.md` (`>= 3,000 words`) and `GUMROAD-COPY-PASTE.md` (`>= 2,500 words`), compiles Markdown into Gumroad TipTap HTML (`GUMROAD-TIPTAP-PAYLOAD.html` with `<p> >= 4`, `<ul> >= 5`, `<li> >= 20`), and verifies 3 deep technical monographs (`docs/01..03.md`, `>= 200 lines`, `>= 1,500 words`, lexical diversity `>= 0.23`).
 - **Tiếng Việt**: Chuẩn hóa cấu trúc thuyết phục kỹ thuật 6 tầng cho mặt tiền GitHub và Gumroad, biên dịch tự động sang mã HTML TipTap không bị vỡ bảng biểu, và kiểm định 3 bài chuyên khảo chuyên sâu chuẩn trích dẫn GEO.
 
 ### Module 03: Dual-Layer Verification & Adversarial Mutation Harness (Pro `$19` Bundle)
 - **Source File**: `pro-bundle/rules/03-dual-layer-verification-and-mutation-harness.md`
-- **Executable Linter**: `pro-bundle/scripts/lint_dual_layer_harness.mjs` (`Error codes: [HAR-001..006]`)
+- **Executable Linter**: `pro-bundle/scripts/lint_dual_layer_harness.mjs` (`Error codes: [HARNESS-001..004]`)
 - **What It Solves**: Separates `HARD`, `CONTEXTUAL`, and `SEMANTIC` verification criteria. Executes bidirectional `pass`/`fail` fixture tests on every embedded Node.js linter, checks PNG binary `IHDR` headers (`1280x720`, `600x600`, `1280x640`, `2400x1800`), enforces Unicode-aware bilingual prose hygiene (`(?<!\p{L})và(?!\p{L})`), and enforces strict Layer 2 Jev state honesty (`executionState: "NOT_RUN"`, `verdict: "UNDETERMINED"`, `probability: null` when `--no-jev` is used).
 - **Tiếng Việt**: Thiết lập kiến trúc kiểm chứng hai lớp kết hợp kiểm thử đột biến hai chiều cho từng bộ lọc Node.js và đọc trực tiếp byte nhị phân của ảnh PNG. Hệ thống bắt lỗi câu dài hay đề mục ghép chữ `và` bằng biểu thức chính quy Unicode, đồng thời cấm tự gán điểm `1.0` giả tạo khi chưa chạy bộ chấm điểm ngữ nghĩa.
 
 ### Module 04: ToS-Compliant Omni-Channel Distribution & Zero-Link Ops (Pro `$19` Bundle)
 - **Source File**: `pro-bundle/rules/04-tos-compliant-omni-channel-distribution-ops.md`
-- **Executable Linter**: `pro-bundle/scripts/lint_omni_channel_distribution.mjs` (`Error codes: [DST-001..005]`)
+- **Executable Linter**: `pro-bundle/scripts/lint_tos_distribution_ops.mjs` (`Error codes: [DIST-001..003]`)
 - **What It Solves**: Automates organic technical distribution without triggering spam filters. Verifies `FACEBOOK-GROUP-ZERO-LINK-KIT.md` (3 native Vietnamese stories `>= 180 words` with **0 external links** in the post body + Dual-Anchor visual watermark routing), `TROJAN-HORSE-COMMENT-PLAYBOOK.md` (80% technical breakdown + 20% natural Dual-Ending A/B rotation), and `facebook-ops-ledger.json` (12 target communities, `PAGE_READ_ONLY` isolation, `max3GramJaccard <= 0.50`, max 3 posts/week).
 - **Tiếng Việt**: Vận hành hệ thống phân phối đa kênh tuân thủ thuật toán với bài đăng Facebook 100% không chứa link ngoài để giữ nguyên tương tác tự nhiên. Bộ công cụ cung cấp mẫu bình luận giải đáp kỹ thuật theo tỷ lệ 80/20 có xoay vòng mẫu câu kết và bộ chặn trùng lặp 3-gram Jaccard (`<= 0.50`) chống khóa tài khoản.
 
