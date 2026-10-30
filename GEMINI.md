@@ -4,8 +4,8 @@
 
 ## 1. Core Execution Invariants
 
-- Keep this root constitution file strictly at or below `200 lines` (`<= 1,800 tokens`) so primary attention heads remain sharp on every turn.
-- Never rely on prose warnings alone. Every architectural invariant below is backed by an executable zero-dependency Node.js linter in `scripts/` returning `exit code 1` on any violation.
+- Keep this root constitution file strictly at or below `200 lines` (`<= 1,800 tokens`) via `One-In, Consolidation-Out` and Option 0 premise audits so primary attention heads remain sharp on every turn.
+- Never rely on prose warnings alone. Every architectural invariant below is backed by an executable zero-dependency Node.js linter in `scripts/` returning `exit code 1` on any violation, verified with two-sided positive (`PASS`) and negative mutation (`FAIL`) controls plus local preflight checks before external mutations.
 - Maintain 0% personal identity leakage, 0 em-dashes in prose, 0 semicolons in prose, and a strict 45-word maximum sentence ceiling in both English and Vietnamese.
 
 ## 2. Active Constitutional Modules & Deterministic Linters

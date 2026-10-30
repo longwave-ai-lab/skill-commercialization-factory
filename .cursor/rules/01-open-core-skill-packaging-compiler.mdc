@@ -21,7 +21,7 @@ alwaysApply: true
    - Structure every commercial skill release into two synchronized distribution tiers:
      - **Tier 1 (`Starter Free Pack - $0+ Pay-What-You-Want`, MIT License)**: Exports Module 01 (`01-*.md`, `.mdc`, `SKILL.md`, `scripts/lint_01.mjs`), root constitutions (`<= 200 lines`), `llms.txt`, `npx` CLI, and all 3 GEO technical monographs (`docs/01..03.md`) into `github-repo/` and `starter-free-pack.zip`.
      - **Tier 2 (`Pro Full Bundle - $19`, Commercial Team License)**: Exports all 4 deep modules (`01..04.md`), all 4 pre-extracted Node.js linters, full multi-agent configurations, and commercial license terms into `pro-<slug>.zip`.
-   - Enforce a cryptographic paywall boundary: `starter-free-pack.zip` must match `github-repo/` Module 01 byte-for-byte while strictly excluding Pro Modules 02, 03, and 04.
+   - Enforce a cryptographic paywall boundary: `starter-free-pack.zip` must match `github-repo/` Module 01 byte-for-byte while strictly excluding Pro Modules 02, 03, and 04. For `WEB_UTILITY_EMPIRE` open-core kits (`distribution/github-open-core/src`), include real `.ts` or `.js` engine source files alongside `tsconfig.json` and `package.json` so GitHub Linguist and external curator scripts never flag the repo as `DOC_ONLY`.
 3. **Step 2 - Deterministic POSIX ZIP Archives & Zero `.git` Metadata Leakage**:
    - Standard Windows `Compress-Archive` embeds backslash path separators (`\`) that break macOS and Linux extraction tools and frequently locks on background file handles.
    - Build both `starter-free-pack.zip` and `pro-<slug>.zip` in memory using deterministic POSIX forward-slash paths (`/`), fixed timestamps, and explicit `.git/` directory exclusion.
@@ -38,7 +38,7 @@ alwaysApply: true
    - Chia sản phẩm thành hai gói phân phối có ranh giới rõ ràng:
      - **Gói 1 (`Starter Free Pack - $0+`, Giấy phép MIT)**: Trích xuất nguyên vẹn Mô-đun 01 kèm bộ lọc tự động, 3 chuyên khảo kỹ thuật (`docs/01..03.md`), file `llms.txt` và bộ cài `npx` vào thư mục `github-repo/` cùng gói nén `starter-free-pack.zip`.
      - **Gói 2 (`Pro Full Bundle - $19`, Giấy phép Thương mại)**: Đóng gói trọn bộ 4 Mô-đun chuyên sâu (`01..04.md`), 4 công cụ kiểm tra tự động bằng Node.js và cấu hình đầy đủ cho mọi nền tảng vào gói `pro-<slug>.zip`.
-   - Khóa cứng ranh giới giữa hai gói: File `starter-free-pack.zip` phải khớp từng byte với Mô-đun 01 trong bản Pro nhưng tuyệt đối không được chứa bất kỳ file nào của Mô-đun 02, 03 và 04.
+   - Khóa cứng ranh giới giữa hai gói: File `starter-free-pack.zip` phải khớp từng byte với Mô-đun 01 trong bản Pro nhưng tuyệt đối không được chứa bất kỳ file nào của Mô-đun 02, 03 và 04. Với sản phẩm công cụ Web (`WEB_UTILITY_EMPIRE`), thư mục `distribution/github-open-core/src` bắt buộc chứa file mã nguồn `.ts` hoặc `.js` thật kèm `tsconfig.json` để kho GitHub không bị gắn cờ thiếu mã nguồn (`DOC_ONLY`).
 3. **Bước 2 - Đóng Gói File Nén Chuẩn POSIX & Chặn Rò Rỉ Thư Mục `.git`**:
    - Công cụ nén mặc định trên Windows thường dùng dấu gạch chéo ngược (`\`) gây lỗi giải nén trên máy Mac và Linux.
    - Trình biên dịch phải tạo file `.zip` trực tiếp trong bộ nhớ với đường dẫn gạch chéo xuôi chuẩn POSIX (`/`), khóa mốc thời gian cố định và loại bỏ hoàn toàn thư mục ẩn `.git/`.
