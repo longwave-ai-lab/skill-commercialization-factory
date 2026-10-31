@@ -84,7 +84,7 @@ node scripts/lint_open_core_compiler.mjs .
  - bin/cli.mjs and llms.txt present
 ```
 
-**Tiếng Việt**: Bạn không cần tin vào lời quảng cáo. Hãy mở cửa sổ dòng lệnh và chạy ngay câu lệnh kiểm tra trong **30 giây** ở trên:
+**Tiếng Việt**: Bạn không cần tin vào lời quảng cáo. Hãy mở terminal và chạy câu lệnh kiểm tra trong **30 giây** ở trên:
 - Trình biên dịch `lint_open_core_compiler.mjs` sẽ tự động kiểm tra toàn bộ cấu trúc `product.manifest.json`, giới hạn **200 dòng** của `CLAUDE.md` / `GEMINI.md`, tính hợp lệ của YAML frontmatter trong `.cursor/rules/*.mdc`, file chỉ mục `llms.txt` và trình cài đặt `bin/cli.mjs`.
 - Nếu bất kỳ file nào bị lệch chuẩn hoặc vượt ngưỡng bộ nhớ chú ý của AI, bộ lọc sẽ dừng lại ngay lập tức với `exit code 1` và chỉ rõ mã lỗi `[COMPILER-001..005]` kèm dòng cần sửa.
 
@@ -98,7 +98,7 @@ Most engineers who build a great Cursor `.mdc` rule, Claude Code `SKILL.md`, or 
 1. **Multi-Agent Configuration & Format Fragmentation (`Attention Dilution & Schema Drift`)**:
    - **The Mechanism**: Cursor IDE expects `.cursor/rules/*.mdc` with strict YAML frontmatter (`description`, `globs`, `alwaysApply`). Claude Code expects a root `CLAUDE.md` (`<= 200 lines`) routing to `.claude/skills/<slug>/SKILL.md`. Google Antigravity expects `GEMINI.md` and `.agents/skills/<slug>/SKILL.md`. Meanwhile, autonomous coding agents look for `llms.txt` and a zero-dependency `npx` CLI installer.
    - **The Failure**: Maintaining four separate copies by hand guarantees version drift within 48 hours. Even worse, dumping 1,200 lines of prose into a single root `CLAUDE.md` triggers middle-context attention decay (**Liu et al., Stanford TACL 2023**), causing instruction adherence to drop below **54%**.
-   - **Tiếng Việt**: Mỗi công cụ AI (`Cursor`, `Claude Code`, `Antigravity`) đòi hỏi một cấu trúc thư mục và định dạng YAML khác nhau. Nếu sửa tay từng nơi, chỉ sau vài ngày các bản phát hành sẽ lệch nhau hoàn toàn. Tệ hơn nữa, nếu nhồi hàng ngàn dòng vào một file gốc duy nhất, AI sẽ bị trôi sự chú ý ở đoạn giữa và bỏ sót hơn **46%** quy tắc.
+   - **Tiếng Việt**: Mỗi công cụ AI (`Cursor`, `Claude Code`, `Antigravity`) đòi hỏi một cấu trúc thư mục và định dạng YAML khác nhau. Nếu sửa tay từng nơi, chỉ sau vài ngày các bản phát hành sẽ lệch nhau hoàn toàn. Tệ hơn nữa, nếu nhồi hơn 1.200 dòng vào một file gốc duy nhất, AI sẽ bị trôi sự chú ý ở đoạn giữa và bỏ sót hơn **46%** quy tắc.
 
 2. **Storefront & Generative Engine Optimization (GEO) Invisibility (`Zero Citation Weight & Broken TipTap DOM`)**:
    - **The Mechanism**: AI answer engines (`Perplexity`, `ChatGPT Search`, `Claude Web Search`, `Google AI Overviews`) rank technical repositories by authoritative citations, quantitative statistics, and verifiable code blocks (**Aggarwal et al., KDD 2024**). Meanwhile, Gumroad's storefront editor uses TipTap Rich-Text HTML, which strips raw Markdown tables (`| col |`) and mangles uncompiled `#` headings into plain paragraphs.
@@ -140,7 +140,7 @@ We follow a transparent Open-Core engineering model. **Module 01** and all 3 GEO
 - **Upgrade to the Full 4-Module Pro Bundle (`$19`)**: Get `pro-skill-commercialization-factory.zip` with all 4 modules, 4 standalone Node.js linters, and the complete distribution kit.
 
 **Tiếng Việt**:
-- **Gói Khởi Đầu Miễn Phí (`$0+` Chuẩn MIT)**: Bao gồm trọn vẹn **Mô-đun 01** (Trình biên dịch đóng gói đa nền tảng cho Cursor, Claude Code, Antigravity), công cụ dòng lệnh `npx`, và chỉ mục `llms.txt`. Gói này cũng đi kèm bộ lọc `lint_open_core_compiler.mjs` và toàn bộ **3 bài chuyên khảo kỹ thuật (`docs/01..03.md`)**.
+- **Gói Khởi Đầu Miễn Phí (`$0+` Chuẩn MIT)**: Bao gồm trọn vẹn **Mô-đun 01** (Trình biên dịch đóng gói đa nền tảng), công cụ dòng lệnh `npx`, và chỉ mục `llms.txt`. Gói này cũng đi kèm bộ lọc `lint_open_core_compiler.mjs` và toàn bộ **3 bài chuyên khảo kỹ thuật (`docs/01..03.md`)**.
 - **Gói Nhà Máy Thương Mại Hóa Bản Pro (`$19`)**: Mở khóa trọn bộ **4 Mô-đun chuyên sâu** và trình biên dịch HTML TipTap cho Gumroad. Đi kèm là hệ thống **239 chốt chặn Lớp 1 + 36 bài kiểm thử đột biến** cùng bộ công cụ phân phối đa kênh (`Zero-Link Facebook Kit`, `Trojan Horse Comment Playbook`, `3-Gram Jaccard Guard`).
 
 ---
@@ -158,7 +158,7 @@ Every rule module in this factory contains four mandatory engineering components
 - **Source File**: [`rules/01-open-core-skill-packaging-compiler.md`](./rules/01-open-core-skill-packaging-compiler.md)
 - **Executable Linter**: [`scripts/lint_open_core_compiler.mjs`](./scripts/lint_open_core_compiler.mjs) (`Error codes: [COMPILER-001..005]`)
 - **What It Solves**: Compiles a single canonical rule markdown file (`pro-bundle/rules/01..04.md`) into 6 synchronized multi-agent targets (`Cursor .mdc`, `Claude SKILL.md`, `Antigravity SKILL.md`, root `CLAUDE.md`/`GEMINI.md <= 200 lines`, `llms.txt`, and `bin/cli.mjs`), while strictly isolating the `$0+` MIT Starter Pack from the `$19` Pro Bundle.
-- **Tiếng Việt**: Biên dịch tự động từ một nguồn Markdown duy nhất ra 6 định dạng chuẩn cho Cursor, Claude Code, Antigravity, chỉ mục `llms.txt` và gói `npx`. Mô-đun này khóa cứng trần **200 dòng** cho file cấu hình gốc và tách biệt rạch ròi gói miễn phí với gói trả phí.
+- **Tiếng Việt**: Biên dịch tự động từ một nguồn Markdown duy nhất ra 6 định dạng chuẩn cho các trình soạn thảo AI, chỉ mục `llms.txt` và gói `npx`. Mô-đun này khóa cứng trần **200 dòng** cho file cấu hình gốc và tách biệt rạch ròi gói miễn phí với gói trả phí.
 
 ### Module 02: GEO Technical Monograph & Storefront Conversion Engine (Pro `$19` Bundle)
 - **Source File**: `pro-bundle/rules/02-geo-monograph-and-storefront-engine.md`
@@ -170,7 +170,7 @@ Every rule module in this factory contains four mandatory engineering components
 - **Source File**: `pro-bundle/rules/03-dual-layer-verification-and-mutation-harness.md`
 - **Executable Linter**: `pro-bundle/scripts/lint_dual_layer_harness.mjs` (`Error codes: [HARNESS-001..004]`)
 - **What It Solves**: Separates `HARD`, `CONTEXTUAL`, and `SEMANTIC` verification criteria. Executes bidirectional `pass`/`fail` fixture tests on every embedded Node.js linter, checks PNG binary `IHDR` headers (`1280x720`, `600x600`, `1280x640`, `2400x1800`), enforces Unicode-aware bilingual prose hygiene (`(?<!\p{L})và(?!\p{L})`), and enforces strict Layer 2 Jev state honesty (`executionState: "NOT_RUN"`, `verdict: "UNDETERMINED"`, `probability: null` when `--no-jev` is used).
-- **Tiếng Việt**: Thiết lập kiến trúc kiểm chứng hai lớp kết hợp kiểm thử đột biến hai chiều cho từng bộ lọc Node.js và đọc trực tiếp byte nhị phân của ảnh PNG. Hệ thống bắt lỗi câu dài hay đề mục ghép chữ `và` bằng biểu thức chính quy Unicode, đồng thời cấm tự gán điểm `1.0` giả tạo khi chưa chạy bộ chấm điểm ngữ nghĩa.
+- **Tiếng Việt**: Thiết lập kiến trúc kiểm chứng hai lớp kết hợp kiểm thử đột biến hai chiều cho từng bộ lọc Node.js và đọc trực tiếp byte nhị phân của ảnh PNG. Hệ thống bắt lỗi câu dài hay đề mục ghép chữ `và` bằng Regex Unicode, đồng thời cấm tự gán điểm `1.0` giả tạo khi chưa chạy bộ chấm điểm ngữ nghĩa.
 
 ### Module 04: ToS-Compliant Omni-Channel Distribution & Zero-Link Ops (Pro `$19` Bundle)
 - **Source File**: `pro-bundle/rules/04-tos-compliant-omni-channel-distribution-ops.md`
@@ -233,10 +233,10 @@ Every rule module in this factory contains four mandatory engineering components
 
 #### Tình Huống 2: Khắc phục triệt để lỗi vỡ định dạng bảng biểu trên trang bán hàng Gumroad
 
-- **Bối cảnh thực tế**: Khi viết tài liệu song ngữ Anh - Việt cho sản phẩm công nghệ, nhiều kỹ sư dùng AI dịch sát từng chữ từ tiếng Anh sang tiếng Việt. Cách làm này tạo ra những câu văn dài 60 đến 70 chữ chứa đầy từ sáo rỗng (*"bản thân vấn đề"*, *"một cách hệ thống"*, *"thông qua việc"*) cùng hàng loạt dấu gạch ngang dài. Khi dán bản Markdown đó vào ô mô tả của Gumroad, các bảng so sánh `| Gói | Giá |` bị vỡ nát thành từng dòng ký tự hỗn độn.
+- **Bối cảnh thực tế**: Khi viết tài liệu song ngữ Anh - Việt cho sản phẩm công nghệ, nhiều kỹ sư dùng AI dịch sát từng chữ từ tiếng Anh sang tiếng Việt. Cách làm này tạo ra những câu văn dài 60 đến 70 chữ chứa đầy từ sáo rỗng (`"bản thân vấn đề"`, `"một cách hệ thống"`, `"thông qua việc"`) cùng hàng loạt dấu gạch ngang dài. Khi dán bản Markdown đó vào ô mô tả của Gumroad, các bảng so sánh `| Gói | Giá |` bị vỡ nát thành từng dòng ký tự hỗn độn.
 - **Cách xử lý bằng Nhà máy Thương mại hóa (`Mô-đun 02 & Mô-đun 03`)**:
   1. Bộ lọc `lint_dual_layer_harness.mjs` tự động quét từng câu văn tiếng Anh và tiếng Việt. Nó báo lỗi ngay nếu gặp bất kỳ câu nào vượt quá **45 chữ**, dính dấu gạch ngang dài, dấu chấm phẩy ngoài khối lệnh hoặc các cụm từ dịch máy ngô nghê.
-  2. Bộ lọc kiểm tra đề mục tiếng Việt bằng biểu thức chính quy Unicode, chặn đứng thói quen ghép hai chủ đề rời rạc bằng chữ `và` trên cùng một tiêu đề.
+  2. Bộ lọc kiểm tra đề mục tiếng Việt bằng Regex Unicode, chặn đứng thói quen ghép hai chủ đề rời rạc bằng chữ `và` trên cùng một tiêu đề.
   3. Lệnh `factory.mjs compile` tự động chuyển đổi toàn bộ file `GUMROAD-COPY-PASTE.md` sang file `gumroad-package/GUMROAD-TIPTAP-PAYLOAD.html` với cấu trúc thẻ `<h3>`, `<p>`, `<ul>`, `<li>` sạch sẽ. Bạn chỉ cần mở file trên trình duyệt rồi nhấn `Ctrl+A`, `Ctrl+C`, `Ctrl+V` thẳng vào Gumroad trong 5 giây.
 
 #### Tình Huống 3: Phân phối bài viết kỹ thuật lên hội nhóm cộng đồng mà không bị bóp tương tác
@@ -295,7 +295,7 @@ We believe in radical engineering honesty. Do **NOT** buy or adopt this system i
 
 **Tiếng Việt**: Bạn **KHÔNG NÊN** mua gói Pro `$19` nếu:
 - Bạn đang tìm kiếm một công cụ "bấm nút làm giàu nhanh" bằng cách xả rác hàng loạt câu lệnh AI hời hợt lên mạng.
-- Bạn không sử dụng cửa sổ dòng lệnh (`Node.js >= 18`) để chạy kiểm thử tự động.
+- Bạn không sử dụng terminal (`Node.js >= 18`) để chạy kiểm thử tự động.
 - Bạn muốn dùng tool spam tự động lên mạng xã hội (hệ thống của chúng tôi chặn đứng hành vi spam và bắt buộc tuân thủ quy tắc đóng góp 80% giá trị kỹ thuật thật).
 - Bạn chỉ cần một file quy tắc nhỏ cho dự án cá nhân và không có nhu cầu đóng gói sản phẩm cho cộng đồng. Trong trường hợp này, gói **Miễn phí `$0+`** ngay tại kho mã nguồn này đã đáp ứng đủ nhu cầu của bạn.
 

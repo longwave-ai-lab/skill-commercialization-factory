@@ -19,7 +19,7 @@ node bin/cli.mjs --check
 node scripts/lint_open_core_compiler.mjs .
 ```
 
-**Tiếng Việt**: Mở cửa sổ dòng lệnh tại thư mục này và chạy lệnh trên để kiểm tra toàn bộ cấu trúc file cấu hình.
+**Tiếng Việt**: Mở terminal tại thư mục này và chạy lệnh trên để kiểm tra toàn bộ cấu trúc file cấu hình.
 
 ---
 
