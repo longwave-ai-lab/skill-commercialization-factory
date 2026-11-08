@@ -137,7 +137,8 @@ We follow a transparent Open-Core engineering model. **Module 01** and all 3 GEO
 | **License & Updates** | MIT License (Open Source) | Commercial Team License + Lifetime Updates |
 
 - **Download Free Open-Core Starter (`$0+`)**: Clone this repository or grab `starter-free-pack.zip` on Gumroad for `$0`.
-- **Upgrade to the Full 4-Module Pro Bundle (`$19`)**: Get `pro-skill-commercialization-factory.zip` with all 4 modules, 4 standalone Node.js linters, and the complete distribution kit.
+- **Upgrade to the Full 4-Module Pro Bundle (`$19`)**: Get `pro-skill-commercialization-factory.zip` with all 4 modules, 4 standalone Node.js linters, and the complete distribution kit on [Gumroad](https://longwave04.gumroad.com/l/skill-commercialization-factory).
+- **Udemy Practice Exams (`60` Production AI Debugging Scenarios)**: [Enroll via Instructor Referral](https://www.udemy.com/course/ai-agent-vibe-coding-debugging-practice-tests-2026/?referralCode=E113BBA17D7355F8CA76) or [Claim the `$12.99` Launch Coupon (`LONGWAVE_PRO_2026`)](https://www.udemy.com/course/ai-agent-vibe-coding-debugging-practice-tests-2026/?couponCode=LONGWAVE_PRO_2026).
 
 **Tiếng Việt**:
 - **Gói Khởi Đầu Miễn Phí (`$0+` Chuẩn MIT)**: Bao gồm trọn vẹn **Mô-đun 01** (Trình biên dịch đóng gói đa nền tảng), công cụ dòng lệnh `npx`, và chỉ mục `llms.txt`. Gói này cũng đi kèm bộ lọc `lint_open_core_compiler.mjs` và toàn bộ **3 bài chuyên khảo kỹ thuật (`docs/01..03.md`)**.
