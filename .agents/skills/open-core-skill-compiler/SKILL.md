@@ -69,7 +69,7 @@ version: 1.0.0
 | **05** | **Open-Core Paywall Boundary** | Accidentally zipping Pro modules (`02..04`) into `starter-free-pack.zip` or forgetting to update Starter Module 01. | Enforcing automated byte-parity for Module 01 and hard exclusion checks blocking Modules 02..04 from `starter-free-pack.zip`. |
 | **06** | **ZIP Path Separators** | Running Windows `Compress-Archive` which writes `\` backslashes into ZIP entry headers and breaks macOS/Linux unzip. | Using in-memory `System.IO.Compression.ZipArchive` with normalized POSIX `/` forward slashes and retry-safe writes. |
 | **07** | **Hidden `.git` Leaks in ZIPs** | Packaging `github-repo/` directly into `starter-free-pack.zip` with `.git/logs/HEAD` and local config attached. | Filtering out all `.git` paths during directory mirroring (`starter-free-pack/`) and verifying 0 `.git/` entries inside ZIPs. |
-| **08** | **Developer Onboarding Friction** | Asking users to run 9 manual `cp -R` commands across hidden dot-folders just to test the free starter module. | Generating `package.json` and `bin/cli.mjs` so users can run `npx @longwave-ai-lab/<slug> init .` or `--check` in 5 seconds. |
+| **08** | **Developer Onboarding Friction** | Asking users to run 9 manual `cp -R` commands across hidden dot-folders just to test the free starter module. | Generating `package.json` and `bin/cli.mjs` so users can run `npx --yes github:longwave-ai-lab/<slug> init .` or `--check` in 5 seconds. |
 | **09** | **AI Search Crawler Indexing** | Publishing a GitHub repository with no machine-readable index for Perplexity, ChatGPT Search, or Claude crawlers. | Compiling a clean `llms.txt` index at the repo root linking every module, linter, and technical monograph. |
 | **10** | **Archive Byte Verification** | Assuming a `.zip` build succeeded without inspecting the internal entry table or comparing uncompressed byte sizes. | Auditing every entry inside both `.zip` archives against on-disk byte lengths before marking the build green. |
 
@@ -254,7 +254,7 @@ Place `product.manifest.json` at your product workspace root so `factory.mjs com
 
 ### 3. Claude Code (`CLAUDE.md` & `.claude/skills/`)
 - Place `SKILL.md` inside `.claude/skills/open-core-skill-compiler/SKILL.md` and keep `CLAUDE.md` at the project root.
-- Run `npx @longwave-ai-lab/skill-commercialization-factory --check` to validate your packaged skill layout in under 1 second.
+- Run `npx --yes github:longwave-ai-lab/skill-commercialization-factory --check` to validate your packaged skill layout in under 1 second.
 - **Tiếng Việt**: Đặt file `SKILL.md` vào `.claude/skills/open-core-skill-compiler/SKILL.md` và chạy lệnh kiểm tra tự động bằng Node.js trước khi đóng gói file nén.
 
 ### 4. ChatGPT (Custom Instructions / Projects)

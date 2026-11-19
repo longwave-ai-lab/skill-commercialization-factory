@@ -12,7 +12,8 @@ Verify your Node.js environment (`>= 18`) and inspect the compiler status:
 
 ```bash
 # Via npx
-npx @longwave-ai-lab/skill-commercialization-factory --check
+npx --yes github:longwave-ai-lab/skill-commercialization-factory --check
+npx --yes github:longwave-ai-lab/skill-commercialization-factory init .
 
 # Or run the local CLI & Module 01 Linter directly
 node bin/cli.mjs --check

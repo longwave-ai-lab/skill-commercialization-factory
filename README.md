@@ -66,7 +66,7 @@ Do not take our word for it. Run a single command right now to execute the Open-
 
 ```bash
 # Option A: Zero-install npx execution (inspect CLI & run system check)
-npx @longwave-ai-lab/skill-commercialization-factory --check
+npx --yes github:longwave-ai-lab/skill-commercialization-factory --check
 
 # Option B: Clone this Open-Core repository and run the Module 01 Packaging Linter
 git clone https://github.com/longwave-ai-lab/skill-commercialization-factory.git
@@ -325,10 +325,10 @@ Every architectural threshold in this factory is grounded in peer-reviewed compu
 
 ```bash
 # Inspect status and verify environment
-npx @longwave-ai-lab/skill-commercialization-factory --check
+npx --yes github:longwave-ai-lab/skill-commercialization-factory --check
 
 # Initialize the Open-Core Skill Packaging Compiler in your current project
-npx @longwave-ai-lab/skill-commercialization-factory init .
+npx --yes github:longwave-ai-lab/skill-commercialization-factory init .
 ```
 
 ### 2. Google Antigravity (`GEMINI.md` & `.agents/skills/`)

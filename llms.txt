@@ -17,6 +17,7 @@
 
 ## Quickstart & Verification CLI
 
-- Install via npx: `npx @longwave-ai-lab/skill-commercialization-factory init .`
+- Install via npx: `npx --yes github:longwave-ai-lab/skill-commercialization-factory init .`
+- Verify via npx: `npx --yes github:longwave-ai-lab/skill-commercialization-factory --check`
 - Run deterministic verification: `node scripts/lint_open_core_compiler.mjs`
 - Quickstart Guide: [QUICKSTART-30S.md](QUICKSTART-30S.md)
